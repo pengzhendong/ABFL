@@ -23,7 +23,7 @@ def describe():
     plt.figure(figsize=(25, 10))
     plt.bar(list(sorted_dict.keys())[:50], list(sorted_dict.values())[:50], color='g')
     pl.xticks(rotation=90)
-    plt.savefig('hist.png')
+    plt.savefig('hist.eps', dpi=600, format='eps'
     plt.show()
 
 def analysis():
