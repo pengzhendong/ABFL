@@ -1,0 +1,6 @@
+.DS_Store
+data/*
+SVMRank/*
+tools/*
+!tools/install.sh
+__pycache__/
