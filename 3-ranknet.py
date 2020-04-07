@@ -24,7 +24,7 @@ def create_base_network(input_dim, is_concat=False):
         combine_input = [code_input, sbfl_input]
 
         output = Embedding(vocab_size, embedding_size, input_length=max_length)(code_input)
-        output = LSTM(1)(output)
+        output = LSTM(1, kernel_regularizer=regularizers.l2(0.01))(output)
         output = Activation('sigmoid')(output)
         sbfl_input = concatenate([output, sbfl_input])
     
